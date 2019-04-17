@@ -1,0 +1,41 @@
+{% extends 'livestream.html' %}
+
+{% block content %}
+	<div class="container-fluid">
+
+		<!-- Page Heading -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label>Select Camera from the list</label>
+					<form  action="{{ url_for('speedcam') }}" method='POST'>
+						<select class="form-control" name="cam_no">
+							<option value='b4cam'>B4 Camera - car 1 Simulation</option>
+							<option value='b12cam'>B12 Camera - car 2 Simulation</option>
+							<option value='b18cam'>B18 Camera - Live Stream</option>
+							<option value='b7cam'>B7-Camera</option>
+							<option value='b2cam'>B2-Camera</option>
+						</select>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container-fluid -->
+{% endblock %}
+{% block scripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$.ajax({
+			  url : "/video_feed",
+			  data : $('#form-control').val(),
+			  type : 'POST'
+			});
+			});
+		});
+	</script>
+{% endblock %}	

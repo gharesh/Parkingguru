@@ -1,0 +1,46 @@
+{% extends 'livestream.html' %}
+
+{% block content %}
+	<div class="container-fluid">
+
+		<!-- Page Heading -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label>Select Camera from the list</label>
+					<form  action="{{ url_for('mlplcam') }}" method='POST'>
+						<select class="form-control" name="cam_no">
+    						<option value='f1_sim1_cam'>MLPL Simulation1-2i</option>
+							<option value='f1_sim2_cam'>MLPL Simulation2-2i1o</option>
+							<option value='f1_1_cam'>Floor1 Entrance Camera</option>
+							<option value='f1_0_cam'>Floor1 Exit Camera</option>
+							<option value='f2_1_cam'>Floor2 Entrance Camera</option>
+							<option value='f2_0_cam'>Floor2 Exit Camera</option>
+							<option value='f3_1_cam'>Floor3 Entrance Camera</option>
+							<option value='f3_0_cam'>Floor3 Exit Camera</option>
+							<option value='f4_1_cam'>Floor4 Entrance Camera</option>
+							<option value='f4_0_cam'>Floor4 Exit Camera</option>
+							<option value='f5_1_cam'>Floor5 Entrance Camera</option>
+							<option value='f5_0_cam'>Floor5 Exit Camera</option>
+							<option value='f6_1_cam'>Floor6 Entrance Camera</option>
+							<option value='f6_0_cam'>Floor6 Exit Camera</option>
+							<option value='f7_1_cam'>Floor7 Entrance Camera</option>
+							<option value='f7_0_cam'>Floor7 Exit Camera</option>
+							<option value='f8_1_cam'>Floor8 Entrance Camera</option>
+							<option value='f8_0_cam'>Floor8 Exit Camera</option>
+							<option value='f9_1_cam'>Floor9 Entrance Camera</option>
+							<option value='f9_0_cam'>Floor9 Exit Camera</option>
+							<option value='f10_1_cam'>Floor10 Entrance Camera</option>
+							<option value='f10_0_cam'>Floor10 Exit Camera</option>
+						</select>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container-fluid -->
+
+{% endblock %}

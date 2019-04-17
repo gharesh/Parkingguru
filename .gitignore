@@ -1,0 +1,5 @@
+# Don't track content of these folders
+.git
+.spyproject
+__pycache__
+.idea

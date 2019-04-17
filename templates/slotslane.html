@@ -1,0 +1,27 @@
+{% extends 'livestream.html' %}
+
+{% block content %}
+	<div class="container-fluid">
+
+		<!-- Page Heading -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label>Select Camera from the list</label>
+					<form  method='POST'>
+						<select class="form-control" name="slots_no">
+    						<option value='f1l1'>MLPL Floor1 - Lane1</option>
+							<option value='f1l2'>MLPL Floor1 - Lane2</option>
+							<option value='f1l2'>MLPL Floor1 - Lane3</option>
+						</select>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container-fluid -->
+
+{% endblock %}
